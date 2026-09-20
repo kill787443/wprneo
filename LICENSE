@@ -21,4 +21,11 @@ Only the following explicitly named creators have the legal right to manage, mod
   * kill787443
   * gummi9485
 
+5. PERMITTED COMMUNITY CONTRIBUTIONS, PORTS, AND MONETIZATION
+Users are explicitly permitted to fork this repository for the sole purpose of creating translations, bug fixes, or compatibility ports to other Java Edition mod loaders or Java versions. All such modifications must be submitted directly back to this repository via a GitHub Pull Request (PR) to be hosted on an official branch.
+
+This permission is strictly subject to the following conditions:
+  * JAVA EXCLUSIVITY: Porting, translating, or converting any assets, models, sounds, or code from this project to the Minecraft Bedrock Edition (including but not limited to Bedrock Add-ons or the Minecraft Marketplace) is strictly PROHIBITED.
+  * PORT MONETIZATION & DONATIONS: The original authors retain exclusive rights to official project monetization (such as official Modrinth rewards or sponsorships). However, contributors who manage an official port branch are permitted to accept voluntary personal donations (e.g., via Ko-fi or Patreon) for their porting work, provided the donation stream is explicitly attributed as a contribution under the "White Point: Reimagined" project and does not involve selling the mod or its assets behind a paywall.
+
 BY VIEWING, DOWNLOADING, OR CLONING THIS REPOSITORY, YOU AGREE TO BE BOUND BY THESE TERMS. UNAUTHORIZED REUSE OR DISTRIBUTION WILL RESULT IN IMMEDIATE INTELLECTUAL PROPERTY AND COPYRIGHT (DMCA) TAKEDOWN ACTIONS.
