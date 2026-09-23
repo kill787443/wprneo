@@ -1,0 +1,17 @@
+{
+  "targets": [
+    "swap"
+  ],
+  "passes": [
+    {
+      "name": "wpr:sbw",
+      "intarget": "minecraft:main",
+      "outtarget": "swap"
+    },
+    {
+      "name": "wpr:sbw",
+      "intarget": "swap",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}
