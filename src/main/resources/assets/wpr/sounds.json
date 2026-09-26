@@ -1,0 +1,18 @@
+{
+  "infested_ambience": {
+    "sounds": [
+      {
+        "name": "wpr:infested_ambience",
+        "stream": true
+      }
+    ]
+  },
+  "infested_countdown": {
+    "sounds": [
+      {
+        "name": "wpr:infested_countdown",
+        "stream": true
+      }
+    ]
+  }
+}
