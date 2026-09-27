@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -13,8 +14,12 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.kill.wpr.sound.ModSounds;
 import org.slf4j.Logger;
+import org.kill.wpr.init.EntityInit;
+import org.kill.wpr.network.SpawnUndyingPayload;
 import org.kill.wpr.worldgen.InfestedStructureFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 
 @Mod(Wpr.MODID)
 public class Wpr {
@@ -48,6 +53,16 @@ public class Wpr {
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         FEATURES.register(modEventBus);
+        EntityInit.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
+        modEventBus.addListener(SpawnUndyingPayload::register);
+
+        NeoForge.EVENT_BUS.addListener(this::onServerStarted);
+    }
+
+    private void onServerStarted(ServerStartedEvent event) {
+        event.getServer().getAllLevels().forEach(level ->
+                level.getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, event.getServer())
+        );
     }
 }

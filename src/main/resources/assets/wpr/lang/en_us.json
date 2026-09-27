@@ -1,4 +1,7 @@
 {
+  "key.categories.wpr": "WPR",
+  "key.wpr.dev_unlock": "Toggle Developer Mode",
+  "key.wpr.debug_undying_glow": "Toggle Undying Debug Glow",
   "itemGroup.wpr": "Example Mod Tab",
   "block.wpr.example_block": "Example Block",
   "item.wpr.example_item": "Example Item"

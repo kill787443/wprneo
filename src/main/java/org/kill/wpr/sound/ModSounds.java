@@ -21,4 +21,11 @@ public class ModSounds {
                     SoundEvent.createVariableRangeEvent(
                             ResourceLocation.fromNamespaceAndPath("wpr", "infested_countdown")
                     ));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> UNDYING_STEP =
+            SOUNDS.register("undying_step", () ->
+                    SoundEvent.createFixedRangeEvent(
+                            ResourceLocation.fromNamespaceAndPath("wpr", "undying_step"),
+                            200.0F
+                    ));
 }
